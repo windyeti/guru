@@ -15,13 +15,13 @@ end
 
 categories = Category.create!([{title: 'Frontend'}, {title: 'Backend'}, {title: 'WEB'}])
 tests = Test.create!([
-    {title: 'HTML', level: 1, user_id: 1, category_id: parent_category(categories, title: 'Frontend')},
-    {title: 'CSS', level: 2, user_id: 1, category_id: parent_category(categories, title: 'Frontend')},
-    {title: 'JS', level: 3, user_id: 1, category_id: parent_category(categories, title: 'Frontend')},
-    {title: 'Query', level: 2, user_id: 1, category_id: parent_category(categories, title: 'Frontend')},
-    {title: 'Ruby', level: 3, user_id: 1, category_id: parent_category(categories, title: 'Backend')},
-    {title: 'RubyOnRails', level: 3, user_id: 1, category_id: parent_category(categories, title: 'Backend')},
-    {title: 'HTTP', level: 1, user_id: 1, category_id: parent_category(categories, title: 'WEB')}
+    {title: 'HTML', level: 1, category_id: parent_category(categories, title: 'Frontend')},
+    {title: 'CSS', level: 2, category_id: parent_category(categories, title: 'Frontend')},
+    {title: 'JS', level: 3, category_id: parent_category(categories, title: 'Frontend')},
+    {title: 'Query', level: 2, category_id: parent_category(categories, title: 'Frontend')},
+    {title: 'Ruby', level: 3, category_id: parent_category(categories, title: 'Backend')},
+    {title: 'RubyOnRails', category_id: parent_category(categories, title: 'Backend')},
+    {title: 'HTTP', level: 1, category_id: parent_category(categories, title: 'WEB')}
   ])
 
 questions = Question.create!([
