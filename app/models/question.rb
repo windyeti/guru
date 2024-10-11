@@ -1,8 +1,8 @@
 class Question < ApplicationRecord
   belongs_to :test
 
-  has_many :ansewrs, dependent: :destroy, invere_of: :question
+  has_many :ansewrs, dependent: :destroy, inverse_of: :question
 
-  validetes :body, presence: true
+  validates :body, presence: true
 
 end
