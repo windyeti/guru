@@ -18,6 +18,7 @@ class Test < ApplicationRecord
                                                     }
 
   validates :title, uniqueness: { scope: :level }
+
   validates :level, numericality: { greater_than_or_equal_to: 0, only_integer: true }
 
   def self.titles_category(category_title)
