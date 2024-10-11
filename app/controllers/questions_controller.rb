@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %w[index new create show edit detroy]
+  before_action :find_test, only: %w[index new create]
   before_action :find_question, only: %w[show edit detroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found_resource
